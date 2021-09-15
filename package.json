@@ -1,0 +1,20 @@
+{
+  "name": "proto-expert-sys",
+  "version": "1.0.0",
+  "description": "Expert system prototype",
+  "main": "index.js",
+  "scripts": {
+    "serve": "pug -w src -o . -P",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tws4793/proto-expert-sys.git"
+  },
+  "author": "Teo Wei Shen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tws4793/proto-expert-sys/issues"
+  },
+  "homepage": "https://github.com/tws4793/proto-expert-sys#readme"
+}

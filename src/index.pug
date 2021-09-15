@@ -1,0 +1,80 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport',content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css')
+    title Expert System Prototype
+  body
+    nav.navbar.is-dark
+      .navbar-brand
+        a.navbar-item Expert System Prototype
+        a.navbar-burger(
+          role='button',
+          aria-label='menu',
+          aria-expanded='false'
+        )
+          span(aria-hidden='true')
+          span(aria-hidden='true')
+          span(aria-hidden='true')
+    section.section
+      .container
+        .columns
+          .column.is-one-third
+            aside.menu
+              p.menu-label Question List
+              ul.menu-list
+                li
+                  a Do you walk?
+                li
+                  a.is-active Are checkboxes allowed?
+                li
+                  a Is select allowed?
+                li
+                  a Are buttons allowed?
+          .column
+            .box
+              h1.title Do you walk?
+              .field.is-grouped
+                .control
+                  button.button.is-primary.is-selected Yes
+                .control
+                  button.button No
+                .control
+                  button.button I don't know
+              p.subtitle.is-6 You have said you walk
+            .box
+              h1.title Are checkboxes allowed?
+              form
+                .field.is-grouped.has-addons
+                  .control.is-expanded
+                    label.checkbox
+                      input(type='checkbox')
+                      |
+                      | Condition A
+                  .control.is-expanded
+                    label.checkbox
+                      input(type='checkbox')
+                      |
+                      | Condition B
+                  .control.is-expanded
+                    label.checkbox
+                      input(type='checkbox')
+                      |
+                      | Condition C
+            .box
+              h1.title Is select allowed?
+              form
+                .field.has-addons
+                  .control.is-expanded
+                    .select.is-multiple.is-fullwidth
+                      select(multiple,size=3)
+                        option(value='a') Condition A
+                        option(value='b') Condition B
+                        option(value='c') Condition C
+            .box
+              h1.title Are buttons allowed?
+              .buttons.has-addons
+                button.button.is-fullwidth.is-primary.is-selected Condition A
+                button.button.is-fullwidth Condition B
+                button.button.is-fullwidth Condition C

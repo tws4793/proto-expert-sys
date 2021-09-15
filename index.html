@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <title>Expert System Prototype</title>
+  </head>
+  <body>
+    <nav class="navbar is-dark">
+      <div class="navbar-brand"><a class="navbar-item">Expert System Prototype</a><a class="navbar-burger" role="button" aria-label="menu" aria-expanded="false"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></a></div>
+    </nav>
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-one-third">
+            <aside class="menu">
+              <p class="menu-label">Question List</p>
+              <ul class="menu-list">
+                <li><a>Do you walk?</a></li>
+                <li><a class="is-active">Are checkboxes allowed?</a></li>
+                <li><a>Is select allowed?</a></li>
+                <li><a>Are buttons allowed?</a></li>
+              </ul>
+            </aside>
+          </div>
+          <div class="column">
+            <div class="box">
+              <h1 class="title">Do you walk?</h1>
+              <div class="field is-grouped">
+                <div class="control">
+                  <button class="button is-primary is-selected">Yes</button>
+                </div>
+                <div class="control">
+                  <button class="button">No</button>
+                </div>
+                <div class="control">
+                  <button class="button">I don't know</button>
+                </div>
+              </div>
+              <p class="subtitle is-6">You have said you walk</p>
+            </div>
+            <div class="box">
+              <h1 class="title">Are checkboxes allowed?</h1>
+              <form>
+                <div class="field is-grouped has-addons">
+                  <div class="control is-expanded">
+                    <label class="checkbox">
+                      <input type="checkbox">
+                      Condition A
+                    </label>
+                  </div>
+                  <div class="control is-expanded">
+                    <label class="checkbox">
+                      <input type="checkbox">
+                      Condition B
+                    </label>
+                  </div>
+                  <div class="control is-expanded">
+                    <label class="checkbox">
+                      <input type="checkbox">
+                      Condition C
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="box">
+              <h1 class="title">Is select allowed?</h1>
+              <form>
+                <div class="field has-addons">
+                  <div class="control is-expanded">
+                    <div class="select is-multiple is-fullwidth">
+                      <select multiple size="3">
+                        <option value="a">Condition A</option>
+                        <option value="b">Condition B</option>
+                        <option value="c">Condition C</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="box">
+              <h1 class="title">Are buttons allowed?</h1>
+              <div class="buttons has-addons">
+                <button class="button is-fullwidth is-primary is-selected">Condition A</button>
+                <button class="button is-fullwidth">Condition B</button>
+                <button class="button is-fullwidth">Condition C</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
