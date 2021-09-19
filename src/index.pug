@@ -4,6 +4,8 @@ html(lang='en')
     meta(charset='utf-8')
     meta(name='viewport',content='width=device-width, initial-scale=1')
     link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css')
+    link(rel='stylesheet',
+    href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css')
     title Expert System Prototype
   body
     nav.navbar.is-dark
@@ -35,13 +37,22 @@ html(lang='en')
           .column
             .box
               h1.title Do you walk?
-              .field.is-grouped
-                .control
-                  button.button.is-primary.is-selected Yes
-                .control
-                  button.button No
-                .control
+              .field.has-addons
+                p.control
+                  button.button Yes
+                p.control
+                  button.button.is-primary.is-selected No
+                p.control
                   button.button I don't know
+              //- The below option preferred
+              //- But consider if in the mobile view the buttons can be on top of one another
+              //- For desktop view consider bigger buttons with wider spacing
+              .buttons
+                button.button Yes
+                button.button.is-primary.is-selected No
+                button.button I don't know
+                //-p.control
+                  p.help (Default: No)
               p.subtitle.is-6 You have said you walk
             .box
               h1.title Are checkboxes allowed?
@@ -74,7 +85,26 @@ html(lang='en')
                         option(value='c') Condition C
             .box
               h1.title Are buttons allowed?
-              .buttons.has-addons
-                button.button.is-fullwidth.is-primary.is-selected Condition A
+              .buttons
+                a.button.is-fullwidth.is-primary.is-selected.has-text-left-tablet Condition 1
+                button.button.is-fullwidth.is-primary.is-selected.has-text-left-tablet Condition A
                 button.button.is-fullwidth Condition B
                 button.button.is-fullwidth Condition C
+            .box
+              h1.title Are buttons allowed?
+              .buttons.has-addons
+                button.button.is-fullwidth.is-primary.is-selected Condition A
+              .buttons
+                a.button.is-fullwidth.has-text-left-tablet.is-success(
+                  style="justify-content: flex-start;"
+                )
+                  span.icon
+                    i.fas.fa-check-square
+                  span Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                a.button.is-fullwidth.has-text-left-tablet(
+                  style="justify-content: flex-start;"
+                )
+                  span.icon
+                    i.far.fa-square
+                  span Lorem ipsum dolor sit amet, consectetur adipiscing elit
+              p.tag Default: No

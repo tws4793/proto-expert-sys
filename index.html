@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Expert System Prototype</title>
   </head>
   <body>
@@ -27,16 +28,21 @@
           <div class="column">
             <div class="box">
               <h1 class="title">Do you walk?</h1>
-              <div class="field is-grouped">
-                <div class="control">
-                  <button class="button is-primary is-selected">Yes</button>
-                </div>
-                <div class="control">
-                  <button class="button">No</button>
-                </div>
-                <div class="control">
+              <div class="field has-addons">
+                <p class="control">
+                  <button class="button">Yes</button>
+                </p>
+                <p class="control">
+                  <button class="button is-primary is-selected">No</button>
+                </p>
+                <p class="control">
                   <button class="button">I don't know</button>
-                </div>
+                </p>
+              </div>
+              <div class="buttons">
+                <button class="button">Yes</button>
+                <button class="button is-primary is-selected">No</button>
+                <button class="button">I don't know</button>
               </div>
               <p class="subtitle is-6">You have said you walk</p>
             </div>
@@ -83,11 +89,19 @@
             </div>
             <div class="box">
               <h1 class="title">Are buttons allowed?</h1>
-              <div class="buttons has-addons">
-                <button class="button is-fullwidth is-primary is-selected">Condition A</button>
+              <div class="buttons"><a class="button is-fullwidth is-primary is-selected has-text-left-tablet">Condition 1</a>
+                <button class="button is-fullwidth is-primary is-selected has-text-left-tablet">Condition A</button>
                 <button class="button is-fullwidth">Condition B</button>
                 <button class="button is-fullwidth">Condition C</button>
               </div>
+            </div>
+            <div class="box">
+              <h1 class="title">Are buttons allowed?</h1>
+              <div class="buttons has-addons">
+                <button class="button is-fullwidth is-primary is-selected">Condition A</button>
+              </div>
+              <div class="buttons"><a class="button is-fullwidth has-text-left-tablet is-success" style="justify-content: flex-start;"><span class="icon"><i class="fas fa-check-square"></i></span><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span></a><a class="button is-fullwidth has-text-left-tablet" style="justify-content: flex-start;"><span class="icon"><i class="far fa-square"></i></span><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span></a></div>
+              <p class="tag">Default: No</p>
             </div>
           </div>
         </div>
